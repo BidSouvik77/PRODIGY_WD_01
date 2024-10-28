@@ -1,0 +1,151 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background: linear-gradient(#040228 0%, #db5945 40%);
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo {
+    color: #fff;
+    font-size: 1.8em;
+    cursor: default;
+}
+
+.navbar {
+    display: flex;
+}
+
+.navbar a {
+    color: #fff;
+    text-decoration: none;
+    margin-left: 15px;
+    font-weight: 600;
+    padding: 6px 15px;
+    border-radius: 20px;
+}
+
+.navbar a:hover,
+.navbar a.active {
+    background: #a0010f;
+}
+
+.hamburger {
+    display: none;
+    font-size: 1.8em;
+    color: #fff;
+    cursor: pointer;
+}
+
+.parallax {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.parallax img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    pointer-events: none;
+}
+
+.sec {
+    position: relative;
+    padding: 50px 30px;
+    background: #a0010f;
+    text-align: center;
+}
+
+.sec h2 {
+    font-size: 2em;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.sec h2:nth-child(2) {
+    font-size: 1.5em;
+}
+
+.sec p {
+    font-size: 1em;
+    color: #fff;
+    font-weight: 300;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+    header {
+        padding: 15px 30px;
+    }
+
+    .logo {
+        font-size: 1.5em;
+    }
+
+    .navbar a {
+        margin-left: 10px;
+        padding: 4px 10px;
+        font-size: 0.9em;
+    }
+
+    .sec h2 {
+        font-size: 1.8em;
+    }
+
+    .sec h2:nth-child(2) {
+        font-size: 1.3em;
+    }
+
+    .sec p {
+        font-size: 0.9em;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar {
+        display: none;
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        background: #a0010f;
+        flex-direction: column;
+        padding: 20px;
+        border-radius: 8px;
+    }
+
+    .navbar a {
+        margin: 10px 0;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .navbar.active {
+        display: flex;
+    }
+}
